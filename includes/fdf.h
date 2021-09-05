@@ -6,7 +6,7 @@
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:45 by klever            #+#    #+#             */
-/*   Updated: 2021/09/05 01:27:11 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 00:16:30 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,11 +130,16 @@ typedef struct s_fdf
 /* Utils*/
 void	p_error(char *s);
 void	free_matrix(char **matrix);
+int		str_hexa_to_int(char *str);
 
 /* start */
 void	set_var(t_fdf	**fdf);
 void	fill_check(t_fdf **fdf, char *str);
+void	create_windows(t_fdf **fdf);
 
 /* Map */
+int		word_count(char **str);
 void	check_map(char *file, t_fdf **fdf);
+void	fiil_map(char *file, t_fdf **fdf);
+
 #endif

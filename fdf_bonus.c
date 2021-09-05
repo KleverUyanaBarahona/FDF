@@ -6,7 +6,7 @@
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 01:30:36 by klever            #+#    #+#             */
-/*   Updated: 2021/09/05 01:34:46 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 00:18:06 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ int	main(int argc, char *argv[])
 	fdf->data->winy = 1080;
 	set_var(&fdf);
 	fill_check(&fdf, argv[1]);
+	create_windows(&fdf);
+	//loop_fdf(&fdf);
 	return (0);
 }

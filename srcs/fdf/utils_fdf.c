@@ -6,7 +6,7 @@
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 00:51:03 by klever            #+#    #+#             */
-/*   Updated: 2021/09/05 01:27:16 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 00:18:10 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ void	set_var(t_fdf	**fdf)
 void	fill_check(t_fdf **fdf, char *str)
 {
 	check_map(str, fdf);
-	//fiil_map(str, fdf);
+	fiil_map(str, fdf);
 }
