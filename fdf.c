@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:50:17 by klever            #+#    #+#             */
-/*   Updated: 2021/09/06 14:13:27 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 18:50:29 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	key_esc(int key, t_fdf **fdf)
 
 static void	loop_fdf(t_fdf **fdf)
 {
-	//draw(fdf);
+	draw(fdf);
 	mlx_put_image_to_window((*fdf)->data->mlx,
 		(*fdf)->data->win, (*fdf)->data->img, 0, 0);
 	mlx_hook((*fdf)->data->win, 2, (1L << 0), key_esc, fdf);

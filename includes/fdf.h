@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:45 by klever            #+#    #+#             */
-/*   Updated: 2021/09/06 13:13:15 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 20:06:10 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,5 +142,9 @@ int		ft_exit(t_fdf **fdf);
 int		word_count(char **str);
 void	check_map(char *file, t_fdf **fdf);
 void	fiil_map(char *file, t_fdf **fdf);
+
+/* Draw */
+void	draw(t_fdf **fdf);
+void	my_mlx_pixel_put(t_fdf *fdf, int x, int y, int color);
 
 #endif

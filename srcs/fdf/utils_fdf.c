@@ -3,14 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   utils_fdf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 00:51:03 by klever            #+#    #+#             */
-/*   Updated: 2021/09/06 14:08:25 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 20:05:57 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/fdf.h"
+
+void	my_mlx_pixel_put(t_fdf *fdf, int x, int y, int color)
+{
+	char	*dst;
+
+	dst = (char *)fdf->data->addr + (y * fdf->data->line_lenght
+			+ x * (fdf->data->bits_per_pixel / 8));
+	*(unsigned int *)dst = color;
+}
 
 int	ft_exit(t_fdf **fdf)
 {
