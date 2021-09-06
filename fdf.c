@@ -6,11 +6,21 @@
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:50:17 by klever            #+#    #+#             */
-/*   Updated: 2021/09/06 00:18:02 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 14:10:05 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/fdf.h"
+
+static void	loop_fdf(t_fdf **fdf)
+{
+	//draw(fdf);
+	mlx_put_image_to_window((*fdf)->data->mlx,
+		(*fdf)->data->win, (*fdf)->data->img, 0, 0);
+	mlx_hook((*fdf)->data->win, 2, (1L << 0), key_esc, fdf);
+	mlx_hook((*fdf)->data->win, 17, (17L << 0), ft_exit, fdf);
+	 mlx_loop((*fdf)->data->mlx);
+}
 
 static int	key_esc(int key, t_fdf **fdf)
 {
@@ -46,6 +56,6 @@ int	main(int argc, char *argv[])
 	set_var(&fdf);
 	fill_check(&fdf, argv[1]);
 	create_windows(&fdf);
-	//loop_fdf(&fdf);
+	loop_fdf(&fdf);
 	return (0);
 }

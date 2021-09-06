@@ -6,13 +6,23 @@
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 01:30:36 by klever            #+#    #+#             */
-/*   Updated: 2021/09/06 00:18:06 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 14:09:07 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/fdf.h"
 
-
+static void	loop_fdf(t_fdf **fdf)
+{
+	//draw(fdf);
+	mlx_put_image_to_window((*fdf)->data->mlx,
+		(*fdf)->data->win, (*fdf)->data->img, 0, 0);
+	//print_menu(fdf);
+	//mlx_hook((*fdf)->data->win, 2, (1L << 0), ft_keypress, fdf);
+	//mlx_hook((*fdf)->data->win, 3, (1L << 0), ft_keyrelease, fdf);
+	mlx_hook((*fdf)->data->win, 17, (17L << 0), ft_exit, fdf);
+	mlx_loop((*fdf)->data->mlx);
+}
 
 int	main(int argc, char *argv[])
 {

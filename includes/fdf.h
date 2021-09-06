@@ -6,7 +6,7 @@
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:45 by klever            #+#    #+#             */
-/*   Updated: 2021/09/06 00:16:30 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 13:13:15 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,7 @@ int		str_hexa_to_int(char *str);
 void	set_var(t_fdf	**fdf);
 void	fill_check(t_fdf **fdf, char *str);
 void	create_windows(t_fdf **fdf);
+int		ft_exit(t_fdf **fdf);
 
 /* Map */
 int		word_count(char **str);

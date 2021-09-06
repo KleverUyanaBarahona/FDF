@@ -6,11 +6,18 @@
 /*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 00:51:03 by klever            #+#    #+#             */
-/*   Updated: 2021/09/06 00:18:10 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/06 14:08:25 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/fdf.h"
+
+int	ft_exit(t_fdf **fdf)
+{
+	write(1, "\x1b[36mClose\n", 11);
+	mlx_destroy_window((*fdf)->data->mlx, (*fdf)->data->win);
+	exit(0);
+}
 
 void	set_var(t_fdf	**fdf)
 {
