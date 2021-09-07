@@ -6,14 +6,14 @@
 #    By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/04 18:44:14 by klever            #+#    #+#              #
-#    Updated: 2021/09/06 18:51:57 by kbarahon         ###   ########.fr        #
+#    Updated: 2021/09/07 21:45:20 by kbarahon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 GNL= srcs/gnl/get_next_line_bonus.c
 NAME= fdf.a
-SRC= $(GNL) ./srcs/fdf/utils.c ./srcs/fdf/utils_fdf.c ./srcs/fdf/read_map.c ./srcs/fdf/draw.c #./srcs/fdf/utils_draw.c
-SRCB = #./srcs/fdf/fdf_bonus/key_code.c ./srcs/fdf/fdf_bonus/key_move.c ./srcs/fdf/fdf_bonus/screenshot.c
+SRC= $(GNL) ./srcs/fdf/utils.c ./srcs/fdf/utils_fdf.c ./srcs/fdf/read_map.c ./srcs/fdf/draw.c ./srcs/fdf/utils_draw.c
+SRCB = ./srcs/fdf/fdf_bonus/key_code.c ./srcs/fdf/fdf_bonus/key_move.c ./srcs/fdf/fdf_bonus/screenshot.c
 OBJ1=$(SRC:.c=.o)
 OBJ=$(OBJ1:.m=.o)
 

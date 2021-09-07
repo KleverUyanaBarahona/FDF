@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 01:30:36 by klever            #+#    #+#             */
-/*   Updated: 2021/09/06 18:50:34 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/07 18:22:11 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static void	loop_fdf(t_fdf **fdf)
 	mlx_put_image_to_window((*fdf)->data->mlx,
 		(*fdf)->data->win, (*fdf)->data->img, 0, 0);
 	print_menu(fdf);
-	//mlx_hook((*fdf)->data->win, 2, (1L << 0), ft_keypress, fdf);
+	mlx_hook((*fdf)->data->win, 2, (1L << 0), ft_keypress, fdf);
 	//mlx_hook((*fdf)->data->win, 3, (1L << 0), ft_keyrelease, fdf);
 	mlx_hook((*fdf)->data->win, 17, (17L << 0), ft_exit, fdf);
 	mlx_loop((*fdf)->data->mlx);
@@ -102,6 +102,6 @@ int	main(int argc, char *argv[])
 	set_var(&fdf);
 	fill_check(&fdf, argv[1]);
 	create_windows(&fdf);
-	//loop_fdf(&fdf);
+	loop_fdf(&fdf);
 	return (0);
 }

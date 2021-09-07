@@ -6,7 +6,7 @@
 /*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:45 by klever            #+#    #+#             */
-/*   Updated: 2021/09/06 20:06:10 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/07 21:21:17 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,5 +146,16 @@ void	fiil_map(char *file, t_fdf **fdf);
 /* Draw */
 void	draw(t_fdf **fdf);
 void	my_mlx_pixel_put(t_fdf *fdf, int x, int y, int color);
+
+/* utils Draw */
+void	set_zoom(t_breshman *brs, t_fdf **fdf);
+void	set_move(t_breshman *brs, t_fdf **fdf);
+double	max_n(double a, double b);
+
+/* Cam */
+int		ft_keypress(int key, t_fdf **fdf);
+int		ft_keyrelease(int key, t_fdf **fdf);
+int		key_move(t_fdf **fdf);
+int		ft_screenshot(t_fdf **fdf);
 
 #endif
