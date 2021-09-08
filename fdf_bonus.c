@@ -3,14 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   fdf_bonus.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 01:30:36 by klever            #+#    #+#             */
-/*   Updated: 2021/09/07 18:22:11 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/08 14:41:31 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/fdf.h"
+
+void	print_star(t_fdf **fdf)
+{
+	int	i;
+
+	i = 0;
+	if ((*fdf)->cam->keycode->sp)
+	{
+		while (i < 200)
+		{
+			mlx_string_put((*fdf)->data->mlx, (*fdf)->data->win,
+				rand() % 2048, rand() % 1080, 0xffc700, ".");
+			mlx_string_put((*fdf)->data->mlx, (*fdf)->data->win, rand () % 2048,
+				rand() % 1080, 0xffffff, ".");
+			i++;
+		}
+	}
+}
 
 static void	print_menu_two(t_fdf **fdf)
 {
@@ -75,7 +93,7 @@ static void	loop_fdf(t_fdf **fdf)
 		(*fdf)->data->win, (*fdf)->data->img, 0, 0);
 	print_menu(fdf);
 	mlx_hook((*fdf)->data->win, 2, (1L << 0), ft_keypress, fdf);
-	//mlx_hook((*fdf)->data->win, 3, (1L << 0), ft_keyrelease, fdf);
+	mlx_hook((*fdf)->data->win, 3, (1L << 0), ft_keyrelease, fdf);
 	mlx_hook((*fdf)->data->win, 17, (17L << 0), ft_exit, fdf);
 	mlx_loop((*fdf)->data->mlx);
 }

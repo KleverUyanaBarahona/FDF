@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:45 by klever            #+#    #+#             */
-/*   Updated: 2021/09/07 21:21:17 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/08 14:36:36 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,6 +133,7 @@ void	free_matrix(char **matrix);
 int		str_hexa_to_int(char *str);
 
 /* start */
+int		start(t_fdf **fdf);
 void	set_var(t_fdf	**fdf);
 void	fill_check(t_fdf **fdf, char *str);
 void	create_windows(t_fdf **fdf);
@@ -146,11 +147,14 @@ void	fiil_map(char *file, t_fdf **fdf);
 /* Draw */
 void	draw(t_fdf **fdf);
 void	my_mlx_pixel_put(t_fdf *fdf, int x, int y, int color);
+int		start(t_fdf **fdf);
+void	print_menu(t_fdf **fdf);
 
 /* utils Draw */
 void	set_zoom(t_breshman *brs, t_fdf **fdf);
 void	set_move(t_breshman *brs, t_fdf **fdf);
 double	max_n(double a, double b);
+void	print_star(t_fdf **fdf);
 
 /* Cam */
 int		ft_keypress(int key, t_fdf **fdf);

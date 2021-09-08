@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 18:49:40 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/07 17:45:31 by kbarahon         ###   ########.fr       */
+/*   Updated: 2021/09/08 12:49:29 by klever           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/fdf.h"
 
-static void	isometric	(double *x, double *y, int z, t_fdf **fdf)
+static void	isometric(double *x, double *y, int z, t_fdf **fdf)
 {
 	int	tmp_x;
 
