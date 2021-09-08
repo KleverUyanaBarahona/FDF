@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: klever <klever@student.42.fr>              +#+  +:+       +#+         #
+#    By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/04 18:44:14 by klever            #+#    #+#              #
-#    Updated: 2021/09/08 17:17:15 by klever           ###   ########.fr        #
+#    Updated: 2021/09/08 19:18:32 by kbarahon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,17 +24,17 @@ $(NAME):	$(OBJ)
 	@make -sC ./srcs/minilibx/
 	@ar -rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "\n\033[34m"****************\\nCompiled...\\n****************\\n"\033[0m\n"
+	@echo "\n\033[42m"****************\\nCompiled...\\n****************\\n"\033[0m\n"
 
 run:
 	@clear
-	@echo "\n\033[34m"****************\\nStart...\\n****************\\n"\033[0m\n"
+	@echo "\n\033[42m"****************\\nStart...\\n****************\\n"\033[0m\n"
 	@gcc -Wall -Wextra -Werror  fdf.c ./srcs/minilibx/libmlx.a -framework OpenGL -framework AppKit $(SRC) libft.a -o fdf
 	@./fdf maps/$(VAR)
 
 runbonus:
 	@make bonus
-	@echo "\n\033[34m"****************\\nStart...\\n****************\\n"\033[0m\n"
+	@echo "\n\033[42m"****************\\nStart...\\n****************\\n"\033[0m\n"
 	@./fdf maps/$(VAR)
 
 all: $(NAME)
@@ -44,11 +44,11 @@ clean:
 	@make -sC ./srcs/minilibx/ clean
 	@make -sC ./srcs/libft/ fclean
 	@clear
-	@echo "\n\033[34m"****************\\nDeleted files...\\n****************\\n"\033[0m\n"
+	@echo "\n\033[42m"****************\\nDeleted files...\\n****************\\n"\033[0m\n"
 
 bonus: 	all
 		@clear
-		@echo "\n\033[34m"****************\\nBonus...\\n****************\\n"\033[0m\n"
+		@echo "\n\033[42m"****************\\nBonus...\\n****************\\n"\033[0m\n"
 		@gcc -Wall -Wextra -Werror  $(SRC) $(SRCB) fdf_bonus.c ./srcs/minilibx/libmlx.a -framework OpenGL -framework AppKit  libft.a -o fdf
 
 fclean: clean
