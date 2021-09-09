@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:45 by klever            #+#    #+#             */
-/*   Updated: 2021/09/08 14:36:36 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/09 19:13:52 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,13 +111,11 @@ typedef struct s_cam
 	t_keycode		*keycode;
 	int				dir_x;
 	int				dir_y;
-	double			angle;
 	double			rotspeed;
 	int				plane;	
 }				t_cam;
 
 /* Data center */
-
 typedef struct s_fdf
 {
 	t_map		*map;

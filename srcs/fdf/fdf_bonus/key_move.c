@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_move.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klever <klever@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 17:54:09 by kbarahon          #+#    #+#             */
-/*   Updated: 2021/09/08 13:59:01 by klever           ###   ########.fr       */
+/*   Updated: 2021/09/09 19:05:26 by kbarahon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static void	key_move_two(t_fdf **fdf)
 	if ((*fdf)->cam->keycode->i == 1)
 		(*fdf)->cam->plane = 0;
 	if ((*fdf)->cam->keycode->q == 1)
-		(*fdf)->cam->angle -= 0.5;
+		(*fdf)->cam->rotspeed -= 1.5;
 	if ((*fdf)->cam->keycode->e == 1)
-		(*fdf)->cam->angle += 0.5;
+		(*fdf)->cam->rotspeed += 1.5;
 	if ((*fdf)->cam->keycode->c == 1)
 		(*fdf)->map->eleva += 0.5;
 	if ((*fdf)->cam->keycode->x == 1)
