@@ -6,7 +6,7 @@
 #    By: kbarahon <kbarahon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/04 18:44:14 by klever            #+#    #+#              #
-#    Updated: 2021/09/09 16:46:27 by kbarahon         ###   ########.fr        #
+#    Updated: 2021/09/09 22:13:43 by kbarahon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,8 @@ norm:
 	@norminette $(SRC) 
 	@norminette $(SRCB) 
 	@norminette ./includes/*.h
+	@norminette fdf_bonus.c
+	@norminette fdf.c
 
 re: clean all
 
